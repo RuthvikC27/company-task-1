@@ -20,8 +20,9 @@ const loginHandler = (req, res) => {
         password
     } = req.body;
 
+    console.log(req.body)
 
-    res.send(user);
+    res.send(req.body);
 }
 
 module.exports = {

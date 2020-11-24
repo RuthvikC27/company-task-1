@@ -43,7 +43,7 @@ export default () => {
         <React.Fragment>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Quiz App - Sign In</title>
+                <title>Loan App - Sign In</title>
             </Helmet>
             <div className={classes.signInBreak}>
                 <div className={classes.signIn}>
