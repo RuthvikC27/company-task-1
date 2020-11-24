@@ -7,6 +7,7 @@ export default () => {
         <Router>
             <Switch>
                 <Route exact path="/login" component={() => <Auth type="LOGIN"/>}></Route>
+                <Route exact path="/register" component={() => <Auth type="REGISTER"/>}></Route>
             </Switch>
         </Router>
     </React.Fragment>

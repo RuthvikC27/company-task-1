@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 // COMPONENTS
-import classes from './login.module.css';
+import classes from './index.module.css';
 import useRequest from '../../../hooks/use-request';
 
 export default () => {
@@ -43,7 +43,7 @@ export default () => {
         <React.Fragment>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Loan App - Sign In</title>
+                <title>Loan App - Login</title>
             </Helmet>
             <div className={classes.signInBreak}>
                 <div className={classes.signIn}>
@@ -88,7 +88,7 @@ export default () => {
                                 <Link to="/forgotpassword">forgot password?</Link>
                             </div>
                             <button >Sign In</button>
-                            <p className={classes.signInMessage}>Don't have an account. Sign up <Link to={"/signup"}>here.</Link></p>
+                            <p className={classes.signInMessage}>Don't have an account. Register <Link to={"/register"}>here.</Link></p>
                         </div>
                     </form>
                 </div>

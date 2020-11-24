@@ -1,0 +1,148 @@
+.errorMessage {
+    color: #ff0015;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.welcome h1 {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.registerBreak {
+    padding: 10px;
+    flex-basis: 40%;
+}
+
+.question {
+    font-size: 200px;
+}
+
+.register {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    /* border-radius: 30px; */
+}
+
+
+.registerForm {
+    margin: auto;
+    flex-basis: 250px;
+    box-shadow: 0.1px 2.5px 8.8px 0.5px grey;
+    padding: 45px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.registerFormInput, .registerSelect {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.registerFormInputCustom {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.registerFormInputCustom>input {
+    width: 400px;
+}
+
+.registerFormInput>input,
+.registerFormInput>input:focus,
+.registerFormInputCustom>input,
+.registerSelect>select:focus,
+.registerSelect>select,
+.registerFormInputCustom>input:focus {
+    outline: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.registerFormInput>input {
+    width: 185px;
+}
+
+.registerSelect>select{
+    width: 185px;
+    padding: 10px;
+    font-size: 14.5px;
+    font-weight: 600;
+}
+
+.registerFormInput>label, .registerFormInputCustom>label, .registerSelect>label {
+    font-size: 12.5px;
+    font-weight: 645;
+}
+
+.registerFormInputSameLine {
+    display: flex;
+    align-items: baseline;
+}
+
+
+.registerButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.registerButton>button {
+    background-color: #232F3E;
+    color: white;
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.registerMessage {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.registerMessage a {
+    text-decoration: none;
+    color: blue;
+}
+
+.errorsList{
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    list-style-type: none;
+}
+
+@media (max-width: 500px) {
+    .register{
+        width: 80%;
+    }
+
+    .registerFormInputCustom>input {
+        width: 335px;
+    }
+    .registerFormInput>input {
+        width: 150px;
+    }
+    .registerSelect>select {
+        width: 150px;
+    }
+
+    .registerButton>button{
+        width: 150px;
+    }
+}

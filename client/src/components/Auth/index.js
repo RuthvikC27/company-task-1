@@ -1,5 +1,6 @@
 import React from 'react';
-import Login from './login/login';
+import Login from './login';
+import Register from './register';
 
 export default ({ type }) => {
     if(type === "LOGIN"){
@@ -7,9 +8,9 @@ export default ({ type }) => {
             <Login />
         </div>
     }
-    // if(type === "SIGNUP"){
-    //     return <div>
-    //         <SignUp />
-    //     </div>
-    // }
+    if(type === "REGISTER"){
+        return <div>
+            <Register />
+        </div>
+    }
 }
