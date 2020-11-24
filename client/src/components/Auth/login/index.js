@@ -45,17 +45,17 @@ export default () => {
                 <meta charSet="utf-8" />
                 <title>Loan App - Login</title>
             </Helmet>
-            <div className={classes.signInBreak}>
-                <div className={classes.signIn}>
+            <div className={classes.loginBreak}>
+                <div className={classes.login}>
                     <form method="POST"
                         autoComplete="off"
                         onSubmit={onSubmit}
-                        className={classes.signInForm}
+                        className={classes.loginForm}
                     >
                         <div className={classes.welcome}>
                             <h1 align="center">WELCOME</h1>
                         </div>
-                        <div className={classes.signInFormInput}>
+                        <div className={classes.loginFormInput}>
                             <label htmlFor="username">username</label>
                             <input id="username"
                                 type="text"
@@ -64,7 +64,7 @@ export default () => {
                                 onChange={setInputusername}
                                 placeholder="Enter username" />
                         </div>
-                        <div className={classes.signInFormInput}>
+                        <div className={classes.loginFormInput}>
                             <label htmlFor="password">Password</label>
                             <input id="password"
                                 type="password"
@@ -83,12 +83,12 @@ export default () => {
                                 }
                             </div>
                         }
-                        <div className={classes.signInButton}>
+                        <div className={classes.loginButton}>
                             <div className={classes.forgotPassword}>
                                 <Link to="/forgotpassword">forgot password?</Link>
                             </div>
                             <button >Sign In</button>
-                            <p className={classes.signInMessage}>Don't have an account. Register <Link to={"/register"}>here.</Link></p>
+                            <p className={classes.loginMessage}>Don't have an account. Register <Link to={"/register"}>here.</Link></p>
                         </div>
                     </form>
                 </div>

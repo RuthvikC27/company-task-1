@@ -10,7 +10,7 @@
     padding: 10px;
 }
 
-.signInBreak {
+.loginBreak {
     padding: 30px;
 }
 
@@ -18,7 +18,7 @@
     font-size: 200px;
 }
 
-.signIn {
+.login {
     background-color: white;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
 }
 
 
-.signInForm {
+.loginForm {
     margin: auto;
     flex-basis: 250px;
     box-shadow: 0.1px 2.5px 8.8px 0.5px grey;
@@ -39,15 +39,14 @@
     height: 450px;
 }
 
-.signInFormInput {
+.loginFormInput {
     display: flex;
     flex-direction: column;
     padding: 15px;
 }
 
-.signInFormInput>input,
-.signInFormInput>input:hover,
-.signInFormInput>input:focus {
+.loginFormInput>input,
+.loginFormInput>input:focus {
     outline: none;
     border-top: 0;
     border-left: 0;
@@ -58,24 +57,24 @@
 }
 
 @media (max-width: 500px) {
-    .signInFormInput>input {
+    .loginFormInput>input {
         width: 320px;
     }
 }
 
 
-.signInFormInput>label{
+.loginFormInput>label{
     font-size: 12.5px;
     font-weight: 645;
 }
 
-.signInButton {
+.loginButton {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.signInButton>button {
+.loginButton>button {
     background-color: #232F3E;
     color: white;
     width: 250px;
@@ -100,13 +99,13 @@
     color: blue;
 }
 
-.signInMessage {
+.loginMessage {
     font-size: 14px;
     font-weight: 600;
     padding: 5px;
 }
 
-.signInMessage a {
+.loginMessage a {
     text-decoration: none;
     color: blue;
 }

@@ -62,7 +62,7 @@ export default () => {
                     autoComplete="off"
                     onSubmit={onSubmit}>
                     <div className={classes.welcome}>
-                        <h1 align="center">Register</h1>
+                        <h1 align="center">REGISTER</h1>
                     </div>
 
                     <div className={classes.registerFormInputCustom}>
