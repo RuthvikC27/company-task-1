@@ -46,7 +46,10 @@ const loginHandler = async (req, res, next) => {
             role: await user.role
         }
 
-        const token = jwt.sign(tokenObj, "secret", {
+        const token = jwt.sign({
+            exp: Math.floor(Date.now() / 1000) + (60 * 60),
+            data: tokenObj
+        }, "secret", {
             // algorithm: 'RS256'
         })
         res.header("authorize", token);
