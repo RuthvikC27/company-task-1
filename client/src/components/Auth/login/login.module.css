@@ -1,0 +1,112 @@
+.errorMessage {
+    color: #ff0015;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.welcome h1 {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.signInBreak {
+    padding: 30px;
+}
+
+.question {
+    font-size: 200px;
+}
+
+.signIn {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    /* border-radius: 30px; */
+}
+
+
+.signInForm {
+    margin: auto;
+    flex-basis: 250px;
+    box-shadow: 0.1px 2.5px 8.8px 0.5px grey;
+    padding: 45px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    height: 450px;
+}
+
+.signInFormInput {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.signInFormInput>input,
+.signInFormInput>input:hover,
+.signInFormInput>input:focus {
+    outline: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px;
+    width: 350px;
+    font-size: 15px;
+}
+
+@media (max-width: 500px) {
+    .signInFormInput>input {
+        width: 320px;
+    }
+}
+
+
+.signInFormInput>label{
+    font-size: 12.5px;
+    font-weight: 645;
+}
+
+.signInButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signInButton>button {
+    background-color: #232F3E;
+    color: white;
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.forgotPassword {
+    text-align: end;
+    font-size: 14px;
+    width: 90%;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.forgotPassword a {
+    text-decoration: none;
+    color: blue;
+}
+
+.signInMessage {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.signInMessage a {
+    text-decoration: none;
+    color: blue;
+}

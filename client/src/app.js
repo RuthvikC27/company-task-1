@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Component from './components';
 
 const App = () => {
     return (
         <React.Fragment>
-            <h1>App component</h1>
+            <Component />
         </React.Fragment>
     );
 };

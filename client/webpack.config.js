@@ -10,6 +10,15 @@ module.exports = {
     historyApiFallback: {
       index: '/'
     },
+    inline: true,
+    contentBase: './dist',
+    port: 5000,
+    proxy: {
+      "/api/**": {
+        target: 'http://localhost:5000',
+        secure: false
+      }
+    }
   },
   module: {
     rules: [{
