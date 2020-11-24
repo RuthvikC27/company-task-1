@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 const Users = require("../../models/users");
+const { token } = require("morgan");
 
 const expressValidatorLogin = [
     body('username').trim().isLength({
@@ -38,8 +39,15 @@ const loginHandler = async (req, res, next) => {
             }
         }
 
+        const tokenObj = {
+            username: user.username,
+            role: user.role
+        }
 
+        const token = jwt.sign(tokenObj, "secret", { algorithm: 'RS256'})
+        res.header("authorize", token);
         res.send(req.body);
+        
     } catch (err) {
         next(err);
     }
