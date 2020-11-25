@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
 // COMPONENTS
 import classes from './index.module.css';
 import useRequest from '../../../hooks/use-request';
@@ -21,7 +21,7 @@ export default () => {
             username,
             password
         },
-        onSuccess: () => history.push("/user/home")
+        onSuccess: () => history.push("/home")
     });
 
     const setInputusername = (e) => {
@@ -36,7 +36,10 @@ export default () => {
         e.preventDefault();
 
         const data = await doRequest();
-        console.log(data);
+
+        let token = data.headers.authorize;
+        localStorage.setItem('token', `Bearer ${token}`);
+        axios.defaults.headers.common['Authorize'] = 'Bearer ' + token;
     }
 
     return (

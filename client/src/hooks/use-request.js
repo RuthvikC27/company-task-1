@@ -12,7 +12,7 @@ export default ({ path, method, body, onSuccess }) => {
             if(onSuccess){
                 onSuccess();
             }
-            return response.data;
+            return response;
 
         } catch(err){
             console.log(err.response.data);
