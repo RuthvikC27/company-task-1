@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // COMPONENTS
@@ -6,6 +6,7 @@ import Auth from './Auth';
 import ProtectedRoute from '../protected-routes/protected-routes';
 import Dashboard from './Dashboard';
 import Listusers from './Dashboard/common/List-users';
+import NotFoundError from './Not-found-error';
 
 export default () => {
 
@@ -18,6 +19,7 @@ export default () => {
                 <Route path="/register" component={() => <Auth type="REGISTER" />}></Route>
                 <ProtectedRoute path="/dashboard" component={Dashboard}></ProtectedRoute>
                 <ProtectedRoute path="/list-users" component={Listusers}></ProtectedRoute>
+                <Route component={NotFoundError}></Route>
             </Switch>
         </Router>
     </React.Fragment>
