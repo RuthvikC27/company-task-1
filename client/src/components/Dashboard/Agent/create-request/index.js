@@ -17,14 +17,13 @@ const CreateRequest = ({ user, role }) => {
 
     // useRequest
     const { doRequest, errors } = useRequest({
-        path: '/api/loan/request',
+        path: '/api/loan/create-request',
         method: 'post',
         body: {
             amount,
             customer,
             duration
-        },
-        onSuccess: () => history.push("/login")
+        }
     });
 
     const onSubmit = async (e) => {

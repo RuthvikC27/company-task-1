@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-export default ({ path, method, body, onSuccess }) => {
+const useRequest = ({ path, method, body, onSuccess }) => {
     const [ errors, setErrors ] = useState([]);
 
     const doRequest = async() => {
         try {
             setErrors(null);
+            if(localStorage.getItem('token')){
+                axios.defaults.headers.common['Authorize'] = 'Bearer' + localStorage.getItem('token');
+            }
+
             const response = await axios[method](path, body);
 
             if(onSuccess){
@@ -22,3 +26,6 @@ export default ({ path, method, body, onSuccess }) => {
 
     return { doRequest, errors };
 }
+
+
+export default useRequest;
