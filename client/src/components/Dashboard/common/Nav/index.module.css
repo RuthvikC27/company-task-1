@@ -1,6 +1,7 @@
 
 .navigation{
     display: flex;
+    justify-content: baseline;
 }
 
 .leftLinks{
@@ -9,6 +10,7 @@
 
 .rightLinks{
     justify-content: flex-end;
+    align-items: baseline;
 }
 
 .rightLinks, .leftLinks{
@@ -21,6 +23,8 @@
 .rightLinks li, .leftLinks li{
     padding: 10px;
     color: black;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .rightLinks li a, .leftLinks li a{
@@ -37,4 +41,7 @@
     background-color: tomato;
     padding: 10px;
     cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
 }

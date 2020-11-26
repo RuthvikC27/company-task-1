@@ -12,12 +12,6 @@ const Customer = () => {
         },
         {
             id: 2,
-            href: "/list-users",
-            name: "List users",
-            side: "left"
-        },
-        {
-            id: 3,
             href: "/loan-requests",
             name: "Loan requests",
             side: "left"

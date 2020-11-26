@@ -21,6 +21,12 @@ const Agent = () => {
             href: "/loan-requests",
             name: "Loan requests",
             side: "left"
+        },
+        {
+            id: 4,
+            href: "/create-request",
+            name: "Create request",
+            side: "left"
         }
     ]
 
