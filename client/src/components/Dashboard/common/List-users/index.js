@@ -1,10 +1,11 @@
 import React from 'react';
 import Nav from '../Nav';
 
-const Listusers = ({ role }) => {
+const Listusers = ({ role, user }) => {
     return (
         <React.Fragment>
-            <Nav role={role}/>
+            <Nav role={role}
+                user={user} />
         </React.Fragment>
     );
 };

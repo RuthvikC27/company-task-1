@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import classes from './index.module.css';
 
-const Nav = ({ role }) => {
+const Nav = ({ role, user }) => {
 
     let links;
 
@@ -107,7 +107,9 @@ const Nav = ({ role }) => {
             </ul>
             <ul className={classes.rightLinks}>
                 {rightLinks()}
-
+                <li key={user}>
+                    <p className={classes.user}>{role}-{user}</p>
+                </li>
                 <li key={10} >
                     <button className={classes.logout} onClick={logout}>Logout</button>
                 </li>

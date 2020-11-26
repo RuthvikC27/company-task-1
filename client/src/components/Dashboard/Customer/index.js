@@ -1,11 +1,12 @@
 import React from 'react';
 import Nav from '../common/Nav';
 
-const Customer = ({ role }) => {
+const Customer = ({ role, user }) => {
 
     return (
         <React.Fragment>
-            <Nav role={role}/>
+            <Nav role={role}
+                user={user} />
             Customer
         </React.Fragment>
     );
