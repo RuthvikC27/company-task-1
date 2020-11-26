@@ -6,6 +6,7 @@ import Auth from './Auth';
 import ProtectedRoute from '../protected-routes/protected-routes';
 import Dashboard from './Dashboard';
 import Listusers from './Dashboard/common/List-users';
+import CreateRequest from './Dashboard/Agent/create-request';
 import NotFoundError from './Not-found-error';
 
 export default () => {
@@ -19,6 +20,7 @@ export default () => {
                 <Route path="/register" component={() => <Auth type="REGISTER" />}></Route>
                 <ProtectedRoute path="/dashboard" component={Dashboard}></ProtectedRoute>
                 <ProtectedRoute path="/list-users" component={Listusers}></ProtectedRoute>
+                <ProtectedRoute path="/create-request" component={CreateRequest}></ProtectedRoute>
                 <Route component={NotFoundError}></Route>
             </Switch>
         </Router>

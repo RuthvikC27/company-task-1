@@ -1,0 +1,148 @@
+.errorMessage {
+    color: #ff0015;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.welcome h1 {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.loanBreak {
+    padding: 10px;
+    flex-basis: 40%;
+}
+
+.question {
+    font-size: 200px;
+}
+
+.loan {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    /* border-radius: 30px; */
+}
+
+
+.loanForm {
+    margin: auto;
+    flex-basis: 250px;
+    box-shadow: 0.1px 2.5px 8.8px 0.5px grey;
+    padding: 45px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.loanFormInput, .loanSelect {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.loanFormInputCustom {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.loanFormInputCustom>input {
+    width: 400px;
+}
+
+.loanFormInput>input,
+.loanFormInput>input:focus,
+.loanFormInputCustom>input,
+.loanSelect>select:focus,
+.loanSelect>select,
+.loanFormInputCustom>input:focus {
+    outline: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.loanFormInput>input {
+    width: 185px;
+}
+
+.loanSelect>select{
+    width: 185px;
+    padding: 10px;
+    font-size: 14.5px;
+    font-weight: 600;
+}
+
+.loanFormInput>label, .loanFormInputCustom>label, .loanSelect>label {
+    font-size: 12.5px;
+    font-weight: 645;
+}
+
+.loanFormInputSameLine {
+    display: flex;
+    align-items: baseline;
+}
+
+
+.loanButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.loanButton>button {
+    background-color: #232F3E;
+    color: white;
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.loanMessage {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.loanMessage a {
+    text-decoration: none;
+    color: blue;
+}
+
+.errorsList{
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    list-style-type: none;
+}
+
+@media (max-width: 500px) {
+    .loan{
+        width: 80%;
+    }
+
+    .loanFormInputCustom>input {
+        width: 335px;
+    }
+    .loanFormInput>input {
+        width: 150px;
+    }
+    .loanSelect>select {
+        width: 150px;
+    }
+
+    .loanButton>button{
+        width: 150px;
+    }
+}
