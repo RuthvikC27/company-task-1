@@ -5,9 +5,6 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 const Users = require("../../models/users");
-const {
-    token
-} = require("morgan");
 
 const expressValidatorLogin = [
     body('username').trim().isLength({
