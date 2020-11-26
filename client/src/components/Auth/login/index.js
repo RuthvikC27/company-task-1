@@ -7,7 +7,7 @@ import axios from 'axios';
 import classes from './index.module.css';
 import useRequest from '../../../hooks/use-request';
 
-export default () => {
+const Login =  () => {
     const history = useHistory();
 
     const [username, setusername] = useState('');
@@ -101,3 +101,5 @@ export default () => {
         </React.Fragment>
     );
 };
+
+export default Login

@@ -13,6 +13,7 @@ const NotFound = () => {
             onClick={() => history.push("/dashboard")}
             width="650" 
             height="650" 
+            alt="not-found-404"
             className={classes.NotFound} />
         </div>
     );

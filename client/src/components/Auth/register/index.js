@@ -7,7 +7,7 @@ import useRequest from '../../../hooks/use-request';
 import classes from './index.module.css';
 
 
-export default () => {
+const Register =  () => {
     const history = useHistory();
 
     const [username, setUsername] = useState('');
@@ -138,3 +138,6 @@ export default () => {
         </React.Fragment>
     );
 };
+
+
+export default Register

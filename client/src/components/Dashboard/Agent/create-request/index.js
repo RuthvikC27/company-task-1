@@ -8,7 +8,7 @@ import classes from './index.module.css';
 import Nav from '../../common/Nav';
 
 
-export default ({ user, role }) => {
+const CreateRequest = ({ user, role }) => {
     const history = useHistory();
 
     const [customer, setCustomer] = useState('');
@@ -110,3 +110,5 @@ export default ({ user, role }) => {
         </React.Fragment>
     );
 };
+
+export default CreateRequest;

@@ -2,7 +2,7 @@ import React from 'react';
 import Login from './login';
 import Register from './register';
 
-export default ({ type }) => {
+const Auth = ({ type }) => {
     if (type === "LOGIN") {
         return <div>
             <Login />
@@ -14,3 +14,5 @@ export default ({ type }) => {
         </div>
     }
 }
+
+export default Auth

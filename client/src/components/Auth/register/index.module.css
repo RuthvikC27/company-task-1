@@ -98,7 +98,7 @@
 }
 
 .registerButton>button {
-    background-color: #232F3E;
+    background-color: tomato;
     color: white;
     width: 250px;
     text-align: center;
@@ -117,7 +117,7 @@
 
 .registerMessage a {
     text-decoration: none;
-    color: blue;
+    color: tomato;
 }
 
 .errorsList{
