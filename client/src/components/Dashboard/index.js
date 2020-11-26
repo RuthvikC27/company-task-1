@@ -7,13 +7,13 @@ import Customer from './Customer';
 const Home = ({ user, role }) => {
 
     if(role === 'Admin'){
-        return <Admin user={user}/>
+        return <Admin user={user} role={role}/>
     }
     if(role === 'Agent'){
-        return <Agent user={user}/>
+        return <Agent user={user} role={role}/>
     }
     if(role === 'Customer'){
-        return <Customer user={user}/>
+        return <Customer user={user} role={role}/>
     }
     return <React.Fragment>
             Dashboard

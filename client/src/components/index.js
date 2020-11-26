@@ -12,8 +12,8 @@ export default () => {
                 <Route exact path="/login"
                     component={() => <Auth type="LOGIN" />}
                 ></Route>
-                <Route exact path="/register" component={() => <Auth type="REGISTER" />}></Route>
-                <ProtectedRoute exact path="/dashboard" component={Dashboard}></ProtectedRoute>
+                <Route path="/register" component={() => <Auth type="REGISTER" />}></Route>
+                <ProtectedRoute path="/dashboard" component={Dashboard}></ProtectedRoute>
             </Switch>
         </Router>
     </React.Fragment>

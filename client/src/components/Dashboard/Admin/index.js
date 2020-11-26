@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../common/Nav';
 
-const Admin = () => {
+const Admin = ({ role }) => {
     const links = [
         {
             id: 1,
@@ -26,7 +26,7 @@ const Admin = () => {
     return (
         <React.Fragment>
             <Nav links={links}/>
-            Admin
+            {role}
         </React.Fragment>
     );
 };
