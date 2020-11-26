@@ -53,7 +53,7 @@ const loginHandler = async (req, res, next) => {
             // algorithm: 'RS256'
         })
         res.header("authorize", token);
-        res.send("Logged In");
+        res.send("Logged IN");
 
     } catch (err) {
         console.log(err.message)

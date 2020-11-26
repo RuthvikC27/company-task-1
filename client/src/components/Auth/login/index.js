@@ -21,7 +21,6 @@ export default () => {
             username,
             password
         },
-        onSuccess: () => history.push("/home")
     });
 
     const setInputusername = (e) => {
@@ -40,6 +39,8 @@ export default () => {
         let token = data.headers.authorize;
         localStorage.setItem('token', `Bearer ${token}`);
         axios.defaults.headers.common['Authorize'] = 'Bearer ' + token;
+        
+        history.push("/dashboard")
     }
 
     return (
