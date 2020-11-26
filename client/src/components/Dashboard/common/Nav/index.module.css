@@ -16,7 +16,7 @@
 .rightLinks, .leftLinks{
     display: flex;
     list-style: none;
-    width: 45%;
+    width: 30%;
     margin: auto;
 }
 
