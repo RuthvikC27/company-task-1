@@ -1,0 +1,40 @@
+
+.navigation{
+    display: flex;
+}
+
+.leftLinks{
+    justify-content: space-around;
+}
+
+.rightLinks{
+    justify-content: flex-end;
+}
+
+.rightLinks, .leftLinks{
+    display: flex;
+    list-style: none;
+    width: 45%;
+    margin: auto;
+}
+
+.rightLinks li, .leftLinks li{
+    padding: 10px;
+    color: black;
+}
+
+.rightLinks li a, .leftLinks li a{
+    text-decoration: none;
+}
+
+.navButtons{
+    color: inherit;
+}
+
+.logout{
+    border: 0;
+    color: white;
+    background-color: tomato;
+    padding: 10px;
+    cursor: pointer;
+}
