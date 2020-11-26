@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useHistory, Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 
 // COMPONENTS
@@ -9,7 +8,6 @@ import Nav from '../../common/Nav';
 
 
 const CreateRequest = ({ user, role }) => {
-    const history = useHistory();
 
     const [customer, setCustomer] = useState('');
     const [amount, setAmount] = useState('');
