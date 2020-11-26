@@ -4,7 +4,7 @@ module.exports = async(req, res, next) => {
     try {
         if (req.user.role !== 'Admin' && req.user.role !== 'Agent') {
             throw {
-                statusCode: 403,
+                statusCode: 401,
                 errors: [{
                     msg: "Unauthorized"
                 }]

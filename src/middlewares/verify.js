@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 
 function verify(req, res, next){        
     try{
+        // console.log(req.headers['authorize']);
         const token = req.headers['authorize'].split(" ")[1];
         const decoded = jwt.verify(token, 'secret');
         req.user = decoded.data;
@@ -10,7 +11,7 @@ function verify(req, res, next){
         next();
     }catch(err){
         next({
-            statusCode: 403,
+            statusCode: 401,
             errors: [{
                 msg: "Not authorized"
             }]

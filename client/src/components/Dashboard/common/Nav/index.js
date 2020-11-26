@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import classes from './index.module.css';
+import axios from 'axios';
 
 const Nav = ({ role, user }) => {
 
@@ -88,6 +89,7 @@ const Nav = ({ role, user }) => {
     const logout = (e) => {
         e.preventDefault();
         localStorage.removeItem('token');
+        axios.defaults.headers.common['Authorize'] = '';
 
         history.push("/login");
     }
