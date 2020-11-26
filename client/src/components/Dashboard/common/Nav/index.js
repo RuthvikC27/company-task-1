@@ -2,7 +2,78 @@ import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import classes from './index.module.css';
 
-const Nav = ({ links }) => {
+const Nav = ({ role }) => {
+
+    let links;
+
+    if (role === 'Admin') {
+        links = [
+            {
+                id: 1,
+                href: "/dashboard",
+                name: "Home",
+                side: "left"
+            },
+            {
+                id: 2,
+                href: "/list-users",
+                name: "List users",
+                side: "left"
+            },
+            {
+                id: 3,
+                href: "/loan-requests",
+                name: "Loan requests",
+                side: "left"
+            }
+        ]
+    }
+
+    if (role === 'Agent') {
+        links = [
+            {
+                id: 1,
+                href: "/dashboard",
+                name: "Home",
+                side: "left"
+            },
+            {
+                id: 2,
+                href: "/list-users",
+                name: "List users",
+                side: "left"
+            },
+            {
+                id: 3,
+                href: "/loan-requests",
+                name: "Loan requests",
+                side: "left"
+            },
+            {
+                id: 4,
+                href: "/create-request",
+                name: "Create request",
+                side: "left"
+            }
+        ]
+    }
+
+    if (role === "Customer") {
+        links = [
+            {
+                id: 1,
+                href: "/dashboard",
+                name: "Home",
+                side: "left"
+            },
+            {
+                id: 2,
+                href: "/loan-requests",
+                name: "Loan requests",
+                side: "left"
+            }
+        ]
+    }
 
     const history = useHistory();
 
