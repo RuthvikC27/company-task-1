@@ -32,6 +32,15 @@ const loginHandler = async (req, res, next) => {
             username
         });
 
+        if(!user){
+            throw {
+                statusCode: 400,
+                errors: [{
+                    msg: "User does not exist!"
+                }]
+            }
+        }
+
         if (!bcrypt.compareSync(password, await user.password)) {
             throw {
                 statusCode: 400,
