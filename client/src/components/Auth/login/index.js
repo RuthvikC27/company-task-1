@@ -36,11 +36,12 @@ export default () => {
 
         const data = await doRequest();
 
-        let token = data.headers.authorize;
-        localStorage.setItem('token', `Bearer ${token}`);
-        axios.defaults.headers.common['Authorize'] = 'Bearer ' + token;
-        
-        history.push("/dashboard")
+        if(data){
+            let token = data.headers.authorize;
+            localStorage.setItem('token', `Bearer ${token}`);
+            axios.defaults.headers.common['Authorize'] = 'Bearer ' + token;
+            history.push("/dashboard")
+        }          
     }
 
     return (

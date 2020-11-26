@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import jwt from 'jwt-decode';
 
-const ProtectedRoute = ({ component: Component, ...rest }) => {
+const AuthRoute = ({ component: Component, ...rest }) => {
   const [user, setUser] = useState();
   const [role, setRole] = useState();
   const [status, setStatus] = useState();
@@ -31,12 +31,12 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
     <Route {...rest} render={
       props => (
         status && user && role ?
-          <Component user={user} role={role} setStatus={setStatus} {...rest} {...props} />
-          :
           <Redirect to="/login" />
+          :
+          <Component {...rest} {...props} />
       )
     } />
   )
 }
 
-export default ProtectedRoute;
+export default AuthRoute;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Auth from './Auth';
 import ProtectedRoute from '../protected-routes/protected-routes';
+import Dashboard from './Dashboard';
 
 export default () => {
 
@@ -18,8 +19,3 @@ export default () => {
     </React.Fragment>
 }
 
-function Dashboard() {
-    return <div>
-        Admin Dashboard
-    </div>
-}
