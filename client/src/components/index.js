@@ -9,7 +9,7 @@ import Listusers from './Dashboard/common/List-users';
 import CreateRequest from './Dashboard/Agent/create-request';
 import NotFoundError from './Not-found-error';
 
-export default () => {
+const Main = () => {
 
     return <React.Fragment>
         <Router>
@@ -27,3 +27,4 @@ export default () => {
     </React.Fragment>
 }
 
+export default Main;

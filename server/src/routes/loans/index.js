@@ -2,9 +2,14 @@ const router = require("express").Router();
 
 // MIDDLEWARES
 const verifyMiddleware = require("../../middlewares/verify");
-// Routes
-const createLoanRequest = require("./create-request");
+const validationRequestMiddleware = require("../../middlewares/validate-request");
 
-router.post("/create-request", verifyMiddleware, createLoanRequest);
+// Routes
+const {
+    createLoanRequest,
+    expressValidatorLoanObject
+} = require("./create-request");
+
+router.post("/create-request", verifyMiddleware, expressValidatorLoanObject, validationRequestMiddleware,createLoanRequest);
 
 module.exports = router;
