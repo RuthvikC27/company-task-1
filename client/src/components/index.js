@@ -8,6 +8,7 @@ import Dashboard from './Dashboard';
 import Listusers from './Dashboard/common/List-users';
 import CreateRequest from './Dashboard/Agent/create-request';
 import NotFoundError from './Not-found-error';
+import CustomerLoans from './Dashboard/Customer/customer-loans';
 
 const Main = () => {
 
@@ -21,6 +22,7 @@ const Main = () => {
                 <ProtectedRoute path="/dashboard" component={Dashboard}></ProtectedRoute>
                 <ProtectedRoute path="/list-users" component={Listusers}></ProtectedRoute>
                 <ProtectedRoute path="/create-request" component={CreateRequest}></ProtectedRoute>
+                <ProtectedRoute path="/loan-requests" component={CustomerLoans}></ProtectedRoute>
                 <Route component={NotFoundError}></Route>
             </Switch>
         </Router>

@@ -1,0 +1,59 @@
+.errorMsg{
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 15px;
+}
+
+.customerOne{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: auto;
+    border: 1px solid tomato;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 2px;
+    align-items: baseline;
+}
+
+.customerHeader{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+}
+
+.searchHeader{
+    width: 300px;
+    padding: 10px;
+}
+
+.searchHeader:focus{
+    outline: none;
+}
+
+.noCustomers{
+    text-align: center;
+    color: tomato;
+    margin-top: 15px;
+}
+
+.statusNew{
+    background-color: tomato;
+}
+
+.statusRejected{
+    background-color: red;
+}
+
+.statusApproved{
+    background-color: green;
+}
+
+.statusNew, .statusRejected, .statusApproved{
+    padding: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+}
