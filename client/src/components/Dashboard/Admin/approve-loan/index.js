@@ -13,7 +13,7 @@ const Listusers = ({ role, user }) => {
     useEffect(() => {
         axios.defaults.headers.common['Authorize'] = 'Bearer' + localStorage.getItem('token');
 
-        axios.get("/api/admin/approve-loans")
+        axios.get("/api/admin/all-loans")
             .then(res => {
                 setLoans(res.data);
                 setLoading(false);
@@ -49,7 +49,7 @@ const Listusers = ({ role, user }) => {
                 <ul>
                     {!error && <div className={classes.loansHeader}>
                         <div>
-                            <h1>LOANS LIST</h1>
+                            <h1>APPROVE OR REJECT LOANS</h1>
                         </div>
                         <div>
                             <input className={classes.searchHeader} type="text" placeholder="Search loan" />

@@ -3,7 +3,7 @@ const router = require("express").Router();
 // ROUTERS
 const authRouter = require("./Auth");
 const userRouter = require("./users");
-const loanRouter = require("./loans");
+const loanRouter = require("./agent");
 const customerRouter = require("./customer");
 const adminRouter = require("./admin");
 

@@ -2,10 +2,14 @@ const Loan = require("../../models/loans");
 
 module.exports = async(req, res, next) => {
     try{
-        const loans = await Loan.find({ username: req.user.username})
+        const loan = await Loan.findOne({ _id: req._id})
 
+        const temp = await loan;
+        temp.status = req.status;
 
-        res.send(loans)
+        await Loan.updateOne({ _id: id }, temp);
+
+        res.send("Successfully changed state")
 
     }catch(err){
         next(err);
