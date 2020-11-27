@@ -32,8 +32,12 @@ const Listusers = ({ role, user }) => {
             <main>
                 <ul>
                     {!error && <div className={classes.customerHeader}>
-                        <h1>Customers list</h1>
-                        <input className={classes.searchHeader} type="text" placeholder="Search user"/>
+                        <div>
+                            <h1>Customers list</h1>
+                        </div>
+                        <div>
+                            <input className={classes.searchHeader} type="text" placeholder="Search user"/>
+                        </div>
                     </div>}
                     {customers.length > 0 && customers.map(customer => {
                         return <li key={customer._id}>

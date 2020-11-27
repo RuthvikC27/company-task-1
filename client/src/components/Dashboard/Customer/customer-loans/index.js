@@ -36,6 +36,10 @@ const Listusers = ({ role, user }) => {
         }
     }
 
+    const parseDate = (date) => {
+        return date.split("T")[0];
+    }
+
     return (
         <React.Fragment>
             { error && <div className={classes.errorMsg}>{error}</div>}
@@ -43,17 +47,22 @@ const Listusers = ({ role, user }) => {
                 user={user} />
             <main>
                 <ul>
-                    {!error && <div className={classes.customerHeader}>
-                        <h1>LOANS LIST</h1>
-                        <input className={classes.searchHeader} type="text" placeholder="Search user" />
+                    {!error && <div className={classes.loansHeader}>
+                        <div>
+                            <h1>LOANS LIST</h1>
+                        </div>
+                        <div>
+                            <input className={classes.searchHeader} type="text" placeholder="Search loan" />
+                        </div>
                     </div>}
                     {loans.length > 0 && loans.map(customer => {
                         return <li key={customer._id}>
-                            <div className={classes.customerOne}>
+                            <div className={classes.loansOne}>
                                 <p>User : {customer.username}</p>
                                 <p>Amount : {customer.amount}</p>
                                 <p>Duration : {customer.duration}</p>
-                                { statusColor(customer)}
+                                <p>Date: {parseDate(customer.date)}</p>
+                                {statusColor(customer)}
                             </div>
                         </li>
                     })}

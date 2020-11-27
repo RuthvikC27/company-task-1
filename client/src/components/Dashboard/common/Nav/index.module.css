@@ -51,3 +51,9 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
 }
+
+@media (max-width: 500px){
+    .rightLinks, .leftLinks{
+        width: 45%;
+    }
+}

@@ -16,6 +16,20 @@
     border-radius: 2px;
 }
 
+.customerOne:hover{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: auto;
+    border: 1px solid tomato;
+    background-color: tomato;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
 .customerHeader{
     display: flex;
     justify-content: space-around;
@@ -36,4 +50,16 @@
     text-align: center;
     color: tomato;
     margin-top: 15px;
+}
+
+@media (max-width: 500px){
+    .customerHeader, .customerOne{
+        width: 95%;
+    }
+}
+
+@media (max-width: 700px){
+    .customerHeader, .customerOne{
+        width: 95%;
+    }
 }
