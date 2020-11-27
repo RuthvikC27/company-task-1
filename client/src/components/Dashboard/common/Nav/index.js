@@ -23,8 +23,8 @@ const Nav = ({ role, user }) => {
             },
             {
                 id: 3,
-                href: "/loan-requests",
-                name: "Loan requests",
+                href: "/approve-loans",
+                name: "Approve loans",
                 side: "left"
             }
         ]
