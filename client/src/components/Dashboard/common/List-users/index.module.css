@@ -31,3 +31,9 @@
 .searchHeader:focus{
     outline: none;
 }
+
+.noCustomers{
+    text-align: center;
+    color: tomato;
+    margin-top: 15px;
+}

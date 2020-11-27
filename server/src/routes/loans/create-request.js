@@ -11,7 +11,7 @@ const expressValidatorLoanObject = [
 ]
 
 const createLoanRequest = async (req, res, next) => {
-    console.log(req.body);
+    // console.log(req.body);
     try {
         if (req.user.role !== 'Agent') {
             throw {

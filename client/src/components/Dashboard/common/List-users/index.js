@@ -40,6 +40,7 @@ const Listusers = ({ role, user }) => {
                         </li>
                     })}
                 </ul>
+                { error && customers.length === 0 &&<div className={classes.noCustomers}>No customers found!</div>}
             </main>
         </React.Fragment>
     );
