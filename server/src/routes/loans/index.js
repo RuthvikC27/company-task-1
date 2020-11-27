@@ -3,6 +3,7 @@ const router = require("express").Router();
 // MIDDLEWARES
 const verifyMiddleware = require("../../middlewares/verify");
 const validationRequestMiddleware = require("../../middlewares/validate-request");
+const onlyAgentMiddleware = require("../../middlewares/authorization/onlyAgent");
 
 // Routes
 const {

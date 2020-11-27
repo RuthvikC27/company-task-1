@@ -13,15 +13,7 @@ const expressValidatorLoanObject = [
 const createLoanRequest = async (req, res, next) => {
     // console.log(req.body);
     try {
-        if (req.user.role !== 'Agent') {
-            throw {
-                statusCode: 401,
-                errors: [{
-                    msg: "Unauthorized"
-                }]
-            }
-        }
-
+        
         const {
             customer,
             amount,
