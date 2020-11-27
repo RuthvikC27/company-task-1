@@ -24,7 +24,8 @@ services:
     networks:
       - mern-app
     volumes:
-      - C:\Users\ruthv\OneDrive\Documents\mongoDB\db
+      - C:/Users/ruthv/OneDrive/Documents/mongoDB/db
+      - C:/Users/ruthv/OneDrive/Documents/mongoDB/configdb
 networks:
   mern-app:
     driver: bridge

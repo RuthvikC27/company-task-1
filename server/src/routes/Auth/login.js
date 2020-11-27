@@ -62,7 +62,6 @@ const loginHandler = async (req, res, next) => {
         res.send("Logged IN");
 
     } catch (err) {
-        console.log(err.message)
         next(err);
     }
 }
