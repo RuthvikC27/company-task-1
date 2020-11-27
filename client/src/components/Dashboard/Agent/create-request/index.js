@@ -5,13 +5,15 @@ import { Helmet } from "react-helmet";
 import useRequest from '../../../../hooks/use-request';
 import classes from './index.module.css';
 import Nav from '../../common/Nav';
+// import { useHistory } from 'react-router-dom';
 
 
 const CreateRequest = ({ user, role }) => {
+    // const history = useHistory();
 
     const [customer, setCustomer] = useState('');
     const [amount, setAmount] = useState('');
-    const [ duration, setDuration ] = useState('Admin');
+    const [ duration, setDuration ] = useState(2);
 
     // useRequest
     const { doRequest, errors } = useRequest({
@@ -21,13 +23,19 @@ const CreateRequest = ({ user, role }) => {
             amount,
             customer,
             duration
-        }
+        },
+        onSuccess: () => window.alert("Successfully submitted")
     });
 
     const onSubmit = async (e) => {
         e.preventDefault();
 
-        await doRequest();
+        const data = await doRequest();
+        if(data){
+            setCustomer('');
+            setAmount('');
+            setDuration(2);
+        }
     }
 
     const onSetCustomer = (e) => {
